@@ -1,68 +1,73 @@
-🎯 Objective of the Milestone
+Front-End Fitness Form & BMI Calculation
+🎯 Objective
 
-  The objective of Milestone 1 is to develop the foundational web application interface for the FitPlan AI: Personalized Fitness Plan Generator project.
-  
-  This milestone focuses on:
-  
-  Creating a structured fitness profile form
-  
-  Collecting essential user health data
-  
-  Implementing accurate BMI calculation logic
-  
-  Classifying BMI into standard health categories
+The objective of Milestone 1 is to develop the foundational web application interface for the FitPlan AI: Personalized Fitness Plan Generator project.
 
-Deploying the application using Streamlit on Hugging Face Spaces
+This milestone focuses on:
+
+Building a structured fitness profile form
+
+Collecting essential health information
+
+Implementing accurate BMI calculation logic
+
+Categorizing BMI into standard health classifications
+
+Deploying the application on Hugging Face Spaces
 
 📌 BMI Formula Explanation
 
 BMI (Body Mass Index) is calculated using the formula:
 
-  BMI = Weight(kg)​/(Height(m))2​
+BMI = weight (kg) / (height (m))²
+
+Steps Performed:
+
+Convert height from centimeters to meters
+
+height_m = height_cm / 100
 
 
-Steps performed in the application:
+Apply BMI formula
 
-  Convert height from centimeters to meters
-  Height (m) = Height (cm) / 100
-  
-  Apply BMI formula
-  BMI = weight / (height in meters)^2
-  
-  Round BMI to two decimal places
-  
-  Categorize BMI as:
-  
-  Underweight: BMI < 18.5
-  
-  Normal: 18.5 ≤ BMI < 25
-  
-  Overweight: 25 ≤ BMI < 30
+bmi = weight / (height_m ** 2)
+
+
+Round BMI to two decimal places
+
+Categorize BMI:
+
+Underweight: BMI < 18.5
+
+Normal: 18.5 ≤ BMI < 25
+
+Overweight: 25 ≤ BMI < 30
 
 Obese: BMI ≥ 30
 
 🛠 Steps Performed
-1. Form Creation
+1️⃣ Form Creation
 
-A structured Streamlit form was developed to collect:
+A user-friendly fitness form was built using Streamlit.
 
-Personal Information:
+Input Fields:
+Personal Information
 
-Name
+Name (Required)
 
-Height (cm)
+Height (cm) (Required)
 
-Weight (kg)
+Weight (kg) (Required)
 
-Fitness Details:
+Fitness Details
 
-Fitness Goal
+Fitness Goal (Build Muscle, Weight Loss, Strength Gain, Abs Building, Flexible)
 
-Available Equipment (Multiple Selection)
+Available Equipment (Multiple Selection Allowed)
 
-Fitness Level
+Fitness Level (Beginner, Intermediate, Advanced)
 
-2. Input Validation
+2️⃣ Input Validation
 
 The application ensures:
 
@@ -72,28 +77,68 @@ Height and weight are positive values
 
 Zero or negative inputs are rejected
 
-Proper user error messages are displayed
+Appropriate error messages are displayed
 
-3. BMI Calculation Logic
+3️⃣ BMI Logic Implementation
 
-Height is converted from centimeters to meters
+Height is converted from cm to meters
 
 BMI is calculated using the standard formula
 
 BMI is rounded to two decimal places
 
-BMI category is determined based on WHO classification
+BMI category is displayed
 
-4. Deployment
+User’s name is displayed along with BMI and category
 
-The application was deployed using:
+🚀 Deployment
+
+The application is deployed using:
+
+Python
 
 Streamlit
 
 Hugging Face Spaces
 
-💻 Technologies Used
+GitHub
 
-Python
+🔗 Live Application
 
-Streamlit
+👉 Add your Hugging Face Space link here
+
+📂 Project Structure
+FitPlan-AI/
+└── Milestone1/
+    ├── app.py
+    ├── requirements.txt
+    ├── README.md
+    └── screenshots/
+
+📸 Screenshots
+
+Screenshots of the running application are available in the screenshots/ folder.
+
+⚙️ How to Run Locally
+
+Clone the repository:
+
+git clone <your-repo-link>
+
+
+Navigate to Milestone1:
+
+cd Milestone1
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+Run the app:
+
+streamlit run app.py
+
+📦 Requirements
+streamlit==1.32.0
