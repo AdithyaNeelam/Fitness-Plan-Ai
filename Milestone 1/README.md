@@ -78,3 +78,6 @@ The application ensures:
 - BMI category is determined correctly  
 - User’s name, BMI, and category are displayed together  
 
+## 🔗 Live Application (Hugging Face)
+
+👉 **https://huggingface.co/spaces/Adithya-Neelam/Ai-Fitness-Plan**
