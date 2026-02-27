@@ -87,16 +87,11 @@ if generate:
         with st.spinner("Generating your personalized plan..."):
             plan = query_model(prompt)
 
-        st.markdown("## 📊 Your Fitness Summary")
-        summary_col1, summary_col2 = st.columns(2)
+        # Store data in session state
+        st.session_state["plan"] = plan
+        st.session_state["bmi"] = bmi
+        st.session_state["bmi_status"] = bmi_status
+        st.session_state["name"] = name
 
-        with summary_col1:
-            st.metric("BMI", f"{bmi:.2f}")
-
-        with summary_col2:
-            st.metric("BMI Category", bmi_status)
-
-        st.markdown("---")
-        st.markdown("## 🗓 5-Day Workout Plan")
-
-        st.text_area("", plan, height=500)
+        # Redirect to new page
+        st.switch_page("pages/Workout_Plan.py")
