@@ -41,7 +41,7 @@ Overhead Press - 3x10 - 90 sec
 
 ## Deployment
 Hugging Face Space Link:
-(Add your Space URL here)
+https://huggingface.co/spaces/Adithya-Neelam/Ai-Fitness-Plan
 
 ## How to Run Locally
 1. Set environment variable:
